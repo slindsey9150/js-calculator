@@ -1,0 +1,6 @@
+- Submit function that will colect our input into variables.
+- Calculate monthly cost
+- Append new employee to the DOM
+- Clear the inputs
+- If monthly cost is > $20,000 make background of footer red.
+- Delete button that removes employee from the DOM, does not need to affect the total monthly.

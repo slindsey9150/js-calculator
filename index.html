@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Salary Calculator</title>
+</head>
+<body id="container">
+    <div>
+  <header>
+    <h1>Salary Calculator</h1>
+  </header>
+  <main>
+    <h2>Add Employee</h2>
+    <form>
+      <input id="firstNameInput" type="text" placeholder="First Name">
+
+      <input id="lastNameInput" type="text" placeholder="Last Name">
+
+      <input id="idInput" type="number" placeholder="ID">
+
+      <input id="titleInput" type="text" placeholder="Title">
+
+      <input id="annualSalaryInput" type="number" placeholder="Annual Salary">
+      
+      <button id="submitButton" onClick="submitHandler(event)">Submit</button>
+    </form>
+
+    <h2>Employees</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="employeeData">
+        <!-- New employees will be added here: -->
+      </tbody>
+    </table>
+
+  </main>
+  <footer id="monthlyTotalFooter" class="basicTotalBG">
+    <p>Total Monthly: <span id="totalMonthlyNumber">0</span></p>
+  </footer>
+</div>
+</body>
+</html>
