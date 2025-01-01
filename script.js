@@ -15,8 +15,12 @@ function submitHandler(event) {
     event.preventDefault()
     const firstName = document.getElementById("firstName").value
     const lastName = document.getElementById("lastName").value
+    const idNumber = document.getElementById("idNumber").value
+    const jobTitle = document.getElementById("jobTitle").value
+    const annualSalary = document.getElementById("annualSalary").value
 
-    console.log("Hello I'm submitting an employee's data here:", firstName, ' ', lastName);
+
+    console.log("Hello I'm submitting an employee's data here:", firstName, ' ', lastName, ' ', idNumber, ' ', jobTitle, ' ', annualSalary);
 
 }
 
