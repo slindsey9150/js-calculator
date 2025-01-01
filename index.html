@@ -9,7 +9,11 @@
 <body id="container">
 
   <div>
+    <header>
+      <h1>  Employee Calculator</h1>
+    </header>
     <main>
+      <h2>Employee Data</h2>
       <form>
         <input id="firstName" type="text" placeholder="First Name">
         <input id="lastName" type="text" placeholder="Last Name">
@@ -19,6 +23,21 @@
         <button id="submitButton" onclick="submitHandler(event)">Submit</button>
       </form>
     </main>
+    <h2>Employees</h2>
+    <table>
+      <thead>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>ID Number</td>
+          <td>Job Title</td>
+          <td>Annual Salary</td>
+        </tr>
+      </thead>
+      <tbody id="employeeData"></tbody>
+ 
+
+    </table>
   </div>
   
     <!-- <div>

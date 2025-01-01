@@ -11,6 +11,8 @@ console.log("Hello World!")
 
 // * Submit function that will colect our input into variables.
 
+let totalAnnualSalary = 0
+
 function submitHandler(event) {
     event.preventDefault()
     const firstName = document.getElementById("firstName").value
@@ -19,9 +21,27 @@ function submitHandler(event) {
     const jobTitle = document.getElementById("jobTitle").value
     const annualSalary = document.getElementById("annualSalary").value
 
-
     console.log("Hello I'm submitting an employee's data here:", firstName, ' ', lastName, ' ', idNumber, ' ', jobTitle, ' ', annualSalary);
 
+    console.log("total annual salary", totalAnnualSalary);
+    totalAnnualSalary += Number(annualSalary)
+    console.log("total annual salary", totalAnnualSalary);
+
+    const employeeData = document.getElementById("employeeData")
+    employeeData.innerHTML += `
+         <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>#${idNumber}</td>
+        <td>${jobTitle}</td>
+        <td>$${annualSalary}</td>
+      </tr>
+    `   
+    document.getElementById("firstName").value = ''
+    document.getElementById("lastName").value = ''
+    document.getElementById("idNumber").value = ''
+    document.getElementById("jobTitle").value = ''
+    document.getElementById("annualSalary").value = ''
 }
 
 /*
