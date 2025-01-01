@@ -28,33 +28,49 @@ function submitHandler(event) {
     console.log("total annual salary", totalAnnualSalary);
 
     const employeeData = document.getElementById("employeeData")
+
+    // * append inputed data to DOM
     employeeData.innerHTML += `
          <tr>
         <td>${firstName}</td>
         <td>${lastName}</td>
         <td>#${idNumber}</td>
         <td>${jobTitle}</td>
-        <td>$${annualSalary}</td>
+        <td class='annualSalary'>$${annualSalary}</td>
         <td><button onCLick='deleteHandler(event)'>Delete</button></td>
       </tr>
-    `   
+    `
+
+    // * Clear input fields
     document.getElementById("firstName").value = ''
     document.getElementById("lastName").value = ''
     document.getElementById("idNumber").value = ''
     document.getElementById("jobTitle").value = ''
     document.getElementById("annualSalary").value = ''
 
-// * calculate total monthly value
+    // * calculate total monthly value
     const monthlyTotalNumber = document.getElementById("monthlyTotalNumber")
     const monthlyTotalSalary = totalAnnualSalary / 12
     console.log("Monthly Total Salary:", monthlyTotalSalary);
 
+    // * Append monthlyTotalSalary to DOM
     monthlyTotalNumber.textContent = monthlyTotalSalary
+
+}
+
+function returnText () {
     
 }
 
+// * Delete function that removes employee from DOM
 function deleteHandler(event) {
-    event.target.closest('tr').remove()
+    // totalAnnualSalary -= event.target.closest('tr')
+    let removalTr = ('.annualSalary').text()
+    // let removalTrText = removalTr.text()
+    console.log("Removal TR", removalTr);
+    
+    // event.target.closest('tr').remove()
+
 
 }
 
