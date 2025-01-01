@@ -13,7 +13,11 @@ console.log("Hello World!")
 
 function submitHandler(event) {
     event.preventDefault()
-    console.log("Hello I'm submitting an employee's data here");
+    const firstName = document.getElementById("firstName").value
+    const lastName = document.getElementById("lastName").value
+
+    console.log("Hello I'm submitting an employee's data here:", firstName, ' ', lastName);
+
 }
 
 /*
