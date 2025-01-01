@@ -7,7 +7,21 @@
   <title>Salary Calculator</title>
 </head>
 <body id="container">
-    <div>
+
+  <div>
+    <main>
+      <form>
+        <input id="firstName" placeholder="First Name">
+        <input id="lastName" placeholder="Last Name">
+        <input id="idNumber" placeholder="ID Number">
+        <input id="jobTitle" placeholder="Job Title">
+        <input id="annualSalary" placeholder="Annual Salary">
+        <button id="submitButton" onclick="submitHandler(event)">Submit</button>
+      </form>
+    </main>
+  </div>
+  
+    <!-- <div>
   <header>
     <h1>Salary Calculator</h1>
   </header>
@@ -40,7 +54,7 @@
         </tr>
       </thead>
       <tbody id="employeeData">
-        <!-- New employees will be added here: -->
+         New employees will be added here:
       </tbody>
     </table>
 
@@ -48,6 +62,6 @@
   <footer id="monthlyTotalFooter" class="basicTotalBG">
     <p>Total Monthly: <span id="totalMonthlyNumber">0</span></p>
   </footer>
-</div>
+</div> -->
 </body>
 </html>

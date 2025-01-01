@@ -7,6 +7,16 @@ console.log("Hello World!")
 // If monthly cost is > $20,000 make background of footer red.
 // Delete button that removes employee from the DOM, does not need to affect the total monthly.
 
+
+
+// * Submit function that will colect our input into variables.
+
+function submitHandler(event) {
+    event.preventDefault()
+    console.log("Hello I'm submitting an employee's data here");
+}
+
+/*
 let totalAnnualSalary = 0
 
 function submitHandler(event) {
@@ -75,3 +85,5 @@ function deleteHandler(event) {
     // ! This will delete the closet <tr> parent node, which is the row that the button exists on for the employee.
     event.target.closest('tr').remove()
 }
+
+*/
