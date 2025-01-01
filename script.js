@@ -35,6 +35,7 @@ function submitHandler(event) {
         <td>#${idNumber}</td>
         <td>${jobTitle}</td>
         <td>$${annualSalary}</td>
+        <td><button onCLick='deleteHandler(event)'>Delete</button></td>
       </tr>
     `   
     document.getElementById("firstName").value = ''
@@ -42,6 +43,19 @@ function submitHandler(event) {
     document.getElementById("idNumber").value = ''
     document.getElementById("jobTitle").value = ''
     document.getElementById("annualSalary").value = ''
+
+// * calculate total monthly value
+    const monthlyTotalNumber = document.getElementById("monthlyTotalNumber")
+    const monthlyTotalSalary = totalAnnualSalary / 12
+    console.log("Monthly Total Salary:", monthlyTotalSalary);
+
+    monthlyTotalNumber.textContent = monthlyTotalSalary
+    
+}
+
+function deleteHandler(event) {
+    event.target.closest('tr').remove()
+
 }
 
 /*
