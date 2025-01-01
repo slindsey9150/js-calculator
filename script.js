@@ -58,15 +58,10 @@ function submitHandler(event) {
 
 }
 
-function returnText () {
-    
-}
-
 // * Delete function that removes employee from DOM
 function deleteHandler(event) {
     // totalAnnualSalary -= event.target.closest('tr')
-    let removalTr = ('.annualSalary').text()
-    // let removalTrText = removalTr.text()
+    // let removalTr = event.target.closest('tr')
     console.log("Removal TR", removalTr);
     
     // event.target.closest('tr').remove()
